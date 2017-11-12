@@ -2,8 +2,8 @@ initSDK();
 
 function initSDK() {
   // retrieve the secret and key from server storage
-  var inbenta_secret="eyJ0eXBlIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJwcm9qZWN0IjoiamFsY2FudGFyYV9jaGF0Ym90X2VuIn0.ex2l0qPtyckYQ-OfBmWQ1JD7kFyoTwZdzTVuozqOUA2bTSyxp6A9NLYd6pb1Q2PirKjltzRQ8IjML6WOzy4PJg";
-  var inbenta_key="BVzPNFOE6yS+l6GzZd3/3lH9wOy04pZ4nfKHYlt7jzA=";
+  var inbenta_secret=<inbenta-secret>; // Store your secret away from the client and retrieve it here
+  var inbenta_key=<inbenta-key>;
   // authPOST gets the bearer token 
   // authenticates the SDK build by passing it as a callback
   var inbenta_token = authPOST(inbenta_key, inbenta_secret, initBot);
