@@ -11,7 +11,7 @@ This example is meant to show how to:
 * Customize some CSS to fit your colors and icons,
 * How to use the /auth API method to retrieve the API Token. 
 
-## Set up: 
+## Set up 
 Either the HTML and add it to your page, or store the JavaScript and CSS in separate files and call them from the page you want ot integrate the chatbot in. 
 
 ## Usage
@@ -27,4 +27,7 @@ If you have useful new methods, webhooks, or better ways of doing what this samp
 5. Submit a pull request :D
 
 ## History
-First Version
+v0.1.1 Documentation updated and (some) comments added
+v0.1.1 Inclusion of customMethods for callbacks and getTranscripts()
+v0.1.0 First functional version using the createFromAccessToken().
+v0.0.27 First Version in Git. 
