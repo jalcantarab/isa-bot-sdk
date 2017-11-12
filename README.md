@@ -1,5 +1,7 @@
 # isa-bot-sdk
 Example of use of the **Inbenta SDK**, and **webhooks / callbacks** that can be used in the Chatbot
+For a simpler example, please check **[This Gist](https://gist.github.com/jalcantarab/e56f059455468094509c54fc951329dc)**. 
+For API examples, please check **[This Other One](https://gist.github.com/jalcantarab/0550eb938456c5d91cb28e2db4784eb1)**
 
 # Chatbot SDK Example - Custom initialization
 Simple example of a functioning chatbot SDK User Interface 
