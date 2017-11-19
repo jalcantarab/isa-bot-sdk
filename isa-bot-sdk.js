@@ -1,11 +1,14 @@
 initSDK();
 
 function initSDK() {
-  // retrieve the secret and key from server storage
-  var inbenta_secret=<inbenta-secret>; // Store your secret away from the client and retrieve it here
-  var inbenta_key=<inbenta-key>;
-  // authPOST gets the bearer token 
-  // authenticates the SDK build by passing it as a callback
+  // retrieve the secret and key from server-side or do the rest of this process server-side
+  var inbenta_secret="<inbenta_secret>";
+  var inbenta_key="<inbenta_key>";
+  /* authPOST gets the bearer token 
+   * authenticates the SDK build by passing it as a callback
+   * This authentication mechanism is for TESTS ONLY. 
+   * A Production environment should authenticate server-side
+  */ 
   var inbenta_token = authPOST(inbenta_key, inbenta_secret, initBot);
   // x-inbenta-token, x-inbenta-key added to document.cookies
 }
@@ -15,29 +18,37 @@ function initBot(inbenta_token, inbenta_key) {
   var InbentaAuth =  InbentaChatbotSDK.createFromAccessToken(inbenta_token,inbenta_key);
   // Customize the configuration of your chatbot here, learn more at apidocs.inbenta.io/chatbot/sdk
   var InbentaConfiguration = {
+    // Language of the interface. Currently only English has all tags defined
       lang:'en',
+    // answers object, defines which fields from the content are shown to the user as results
       "answers":{
+        // answerAttributes marks which field will be used for in-dialog responses
         "answerAttributes": ["ANSWER_TEXT"],
+        //sideBubbleAttributes marks which for side-bubble responses
         "sideBubbleAttributes": ["SIDEBUBBLE_TEXT"]
       },
+    // The Audience level of the users for this chatbot. If your instance doesn't use profiles, use always 0 (or leave empty)
       usertype: 0,
-      environment: "development",
+      environment: "production",
+    // Customize the hovering widget (launcher)
       launcher: {
+        // Add a title to display by the icon
         title:""
       },
+    // 'labels' Overrides the label values from the SDK template
       labels: {
         en: {
           'yes' : 'Sure',
           'no' : 'Nope',
           'generic-error-message' : "I'm still in training, please try again",
           'enter-question' : 'Ask Me!',
-          'interface-title' : 'I.S.A. 000A',
+          'interface-title' : 'I.S.A 0099',
           'guest-name' : 'You',
-          'help-question' : "Hello!, I'm Inbenta Support Agent v0.1.0, what can I do for you?",
+          'help-question' : "Hello!, I'm Inbenta Support Agent v0.1.53, what can I do for you?",
           'thanks' : 'Thank you!',
-          'rate-content' : 'Did I help?',
-          'form-message' : 'Please tell me how I can get better',
-          'submit' : 'Send'
+          'rate-content' : 'Did I help you?',
+          'form-message' : 'Please tell me how I can get better at my job',
+          'submit' : 'Send it!'
         }
       }
     }; 
