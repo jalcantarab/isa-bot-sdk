@@ -1,0 +1,161 @@
+/*.inbenta_bot__launcher - General styles for hovering widget */
+.inbenta .inbenta-bot__launcher	{
+    background-color: transparent;
+    opacity: 1;
+    padding: 2px;
+    border-radius: 8px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.16),0 3px 12px 0 rgba(0,0,0,.08);
+    width: 80px;
+    height: 80px;
+    transition: all .3s ease 0s
+}
+/* .inbenta_bot__launcher:hover - Define styles for the hovering widget on hover */
+.inbenta .inbenta-bot__launcher:hover {
+    opacity: 0.7;
+    background-color: transparent;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.16),0 3px 12px 0 rgba(0,0,0,.08);
+    background-position: 50%;
+    padding: 2px;
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+}
+/*.inbenta_bot__launcher__image - Define the image style and source for the widget */
+.inbenta .inbenta-bot__launcher .inbenta-bot__launcher__image { 
+    background-image: url(https://www.inbenta.com/wp-content/themes/inbenta/img/icons/virtual-assistant.svg);
+    background-position: 50%;
+    transition: all .3s ease 0.3s
+    filter: opacity(70%);
+    opacity: 1;
+    width: 80px;
+    height: 80px;
+} 
+/*.inbenta_bot__launcher__image:hover - Define the image style and source for the widget on hover */
+.inbenta .inbenta-bot__launcher .inbenta-bot__launcher__image:hover {
+    background-image: url(https://www.inbenta.com/wp-content/themes/inbenta/img/icons/virtual-assistant.svg);
+    filter: hue-rotate(270deg);
+    background-position: 50%;
+    transition: all .3s ease 0.3s
+    opacity: 1;
+    width: 80px;
+    height: 80px;
+}
+/*.inbenta-bot__chat__header - General styles for the header of the dialog (+avatar) box */
+.inbenta .inbenta-bot__chat__header {
+    background-color: #fff;
+    color: #E3253A;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+/*.header__title - title style for header of the dialog (+avatar) box */
+.inbenta .inbenta-bot__chat__header .header__title {
+    font-size: 20px!important;
+    font-weight: 900!important;
+}
+/*.messages__message__avatar - individual message style for the bot's messages */
+.inbenta .messages__message__avatar {
+	background-color: #fff!important;
+}
+
+/* custom_buttons(0) : Style for the buttons in the avatar's message, use in conjunction with custom_buttons(1,2)*/
+.inbenta .messages__message .messages__message__content .content__buttons button.inbenta-bot-button {
+	background-color:#fff;
+	border: 3px;
+	border-radius: 100px;
+	box-shadow: none;
+	color: #E3253A;
+}
+/* custom_buttons(1): .inbenta-bot-button - Button style for multi-option messages, use in conjunction with cusotm_buttons(0,2)*/
+.inbenta .messages__message .messages__message__content 
+.content__buttons button.inbenta-bot-button[disabled].clicked {
+    box-shadow: inset 0 0 1em gold;
+    opacity: .7;
+    font-weight: 600;
+}
+/* custom_buttons(2): .inbenta-bot-button - Style for the buttons in the avatar's message, use in conjunction with custom_buttons(0,1)*/
+.inbenta  button.footer__form__button.inbenta-bot-button {
+	color: #E3253A!important;
+	background-color:#fff!important;
+}
+/* custom_botIcon(0) .inbenta-bot-icon--avatar - Bot's dialog icon, styles & source image/vector(.svg). See custom_botIcon(1) for a fix on displacement issue*/
+.inbenta .inbenta-bot-icon.inbenta-bot-icon--avatar	{
+    background-image: url(https://www.inbenta.com/wp-content/themes/inbenta/img/icons/virtual-assistant.svg);
+    background-position: 50%;
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+	opacity: 1;
+  	overflow: hidden;
+}
+/* custom_botIcon(1) - hides a repeated bot icon faded & displaced image*/
+.inbenta span.inbenta-bot-icon.inbenta-bot-icon--avatar::before {
+    content: none;
+}
+/*Custom CSS for the Github-repository-search webhook*/
+/*Defines styles for the table, the bullets*/
+.inbenta .messages__message__content .content__text .git-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: block;
+    line-height: 1.4;
+    color: #24292e;
+}
+.inbenta .messages__message__content .content__text .list-item.repo-list-item .octicon.octicon-repo{
+    box-sizing: border-box;
+    display:block;
+    font-size: 14px;
+    color:rgb(3, 102, 214);
+    height: 16;
+    width: 12;
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    width: 16px;
+    text-align: center;
+    vertical-align: bottom;
+}
+.inbenta .messages__message__content .content__text .list-item.repo-list-item .byline {
+    display: block;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 12px;
+    color: #586069;
+}
+.inbenta .messages__message__content .content__text .list-item.repo-list-item {
+    display:block;
+    position: relative;
+    cursor: auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    width: 100%;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 14px;
+    padding-left: 35px;
+    line-height: inherit;
+    text-align: left;
+    color: #0366d6;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+}
+.inbenta .messages__message__content .content__text .list-item .list-item-title{
+    box-sizing: border-box;
+    margin-bottom: 3px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #0366d6;
+    word-wrap: break-word;
+
+}
+.inbenta .messages__message__content .content__text .list-item .meta{
+    float: right;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 11px;
+    color: #6a737d;
+}
